@@ -2,5 +2,5 @@
 
 Deployed website: https://aogle17.github.io/pui-homework
 
-Repository link: https://aogle17.github.io/pui-homework/solution-hw0
+Repository link: https://github.com/aogle17/pui-homework
 
