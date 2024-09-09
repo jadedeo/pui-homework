@@ -1,0 +1,238 @@
+
+/*
+general css
+*/
+
+/* removing the underlink on links attached to text */
+a:link{
+    text-decoration: none;
+}
+
+.logo{
+    border: 0px;
+    width: 400px
+}
+
+.black-line{
+
+    border-bottom: 3px solid black;
+}
+
+.navigation{
+    
+    list-style-type: none; /*removing bullet points */
+
+    text-align: center;
+   
+}
+
+/* highlighting the product selection */
+.products-highlight{
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    box-sizing: content-box;
+    width: 60px;
+    
+    background-color: yellow;   
+}
+
+/*shared property for all landing titles across each page */
+.landing-title{
+    text-align:center;
+    font-size: 20px;
+}
+
+/*creating the layout for the layout of images on product gallery and product detail */
+.gallery {
+    
+
+    width: 430px;
+    margin-top: 50px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+  
+    img {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 3px solid #000000;
+        width: 400px;
+    }
+
+}
+
+.test {
+    
+    width:450px;
+    margin:auto
+}
+
+
+
+
+
+/*
+product 
+gallery 
+specific css
+*/
+
+.full-item:hover{
+    background-color: yellow;
+    .item-name{
+        font-weight:bold;
+    }
+}
+
+
+/*
+product 
+detail
+specific 
+css
+*/
+
+
+/*container for everything */
+.detail-gallery{
+    width:650px;
+    margin:auto;
+    
+
+}
+
+
+/*separate container for the detail image */
+.detail-image{
+    width: 650px;
+    img{
+        width: 600px;
+        border: 3px solid #000000;
+        margin-left: 5%;
+
+        
+    }
+}
+
+/*creating a flex box for the selection section on product detail page */
+
+.selections{
+    flex-direction: column;
+    display:flex;
+    width:250px;
+    margin:auto;
+    gap:12px;
+  
+    p{
+        padding-right: 10%;
+        text-align: left;
+    }
+}
+/* editing the size of the drop down menus on product detail page */
+
+select{
+    width:200px;
+    height: 25px;
+}
+
+/* creating a flex box for the price and add to cart button */
+
+.price-add{
+    padding:15px;
+    display:flex;
+    flex-direction: row;
+    width: 250px;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+
+/*creating the add to cart box on product detail page */
+.add-to-cart {
+    width: 80px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: yellow;
+    margin: 10px;
+    text-align: center;
+    font-style: bold;
+    
+  }
+ 
+    
+/* 
+shopping 
+cart 
+specific css
+*/
+
+
+/*highlighting the cart */
+.cart-highlight{
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    box-sizing: content-box;
+    width: 40px;
+    
+    background-color: yellow;   
+}
+
+
+.cart-item{
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: center;
+    img{
+        width: 200px;
+        margin-left: 25%;
+        margin-right:25%;
+        border: 3px solid #000000;
+        
+    }
+}
+  
+
+.remove{
+    font-size: small;
+}
+
+#total-line{
+    border-bottom: 3px solid black;
+    width:400px;
+
+}
+
+/*creating a checkout box*/
+.checkout-box {
+    width: 80px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: yellow;
+    margin: 10px auto;
+    text-align: center;
+    font-style: bold;
+    
+  }
+
+
+/* flexbox for total selection: line, price, and checkout box*/
+  .total-section{
+    display:flex;
+    flex-direction: column;
+    width:400px;
+    justify-content: center;
+    margin:auto;
+    text-align: center;
+    gap:12px;
+  }
+ 
+
