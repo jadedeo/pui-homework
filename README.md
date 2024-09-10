@@ -4,6 +4,4 @@ Deployed website: https://aogle17.github.io/pui-homework
 
 Repository link: https://github.com/aogle17/pui-homework
 
-Test link: https://aogle17.github.io/pui-homework/solution-hw1/index.html
-
 
