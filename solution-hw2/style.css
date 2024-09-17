@@ -1,0 +1,385 @@
+/*
+general css
+*/
+
+/* removing the underlink on links attached to text */
+
+a:link{
+    text-decoration: none; /*removing an underline from all the links */
+}
+
+.page-top{
+    
+    display:flex;
+    font-family: Arial, Arial, sans-serif;
+    
+    font-size: 25px;
+     
+    
+}
+
+.logo{
+    border: 0px;
+    width: 400px
+}
+
+.black-line{
+
+    border-top: 3px solid black;
+    flex-grow: 1;
+    align-content: centers;
+}
+
+
+.empty-space{
+    flex-grow:1;
+}
+
+.empty-navspace{
+    width:40px;
+}
+.navigation{
+ 
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: .5;
+    
+
+    gap: 130px;
+
+    align-items: baseline;
+    
+    
+
+   
+    
+   
+}
+
+/*flex box that includes everything in the header except for the logo img - line, navigation, and landing title */
+.sans-logo{
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-end;
+
+
+    flex:2;
+    
+}
+
+
+/* highlighting the product selection text */
+.products-highlight{
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    box-sizing: content-box;
+    width: 140px;
+    font-weight: bold;
+    
+    background-color: yellow;   
+}
+
+/*shared property for all landing titles across each page */
+.landing-title{
+    text-align:left;
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+
+/*
+product 
+gallery 
+specific css
+*/
+
+/*full item includes image, description, price, and background box for hover */
+
+/*creating the layout for the layout of images on product gallery and product detail */
+.gallery {
+    
+    
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 430px;
+    margin-top: 50px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+  
+    img {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 3px solid #000000;
+        width: 285px;
+    }
+
+}
+
+/*full item is a containter that includes the image, name, and price; highlighting this section when mouse hovers over */
+.full-item:hover{
+    background-color: yellow;
+    .item-name{
+        font-weight:bold;
+    }
+}
+.full-item{
+    p{
+        margin-left:10px;
+    }
+}
+
+/* first and second row of gallery photos flex boxes */
+.first-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+
+.second-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+/*
+product 
+detail
+specific 
+css
+*/
+
+
+    /*container for everything on product detail page*/
+    .detail-gallery{
+        width:950px;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+        
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 19px;
+        
+        
+
+    }
+
+
+    /*separate container for the detail image */
+    .detail-image{
+        width: 650px;
+        img{
+            width: 600px;
+            border: 3px solid #000000;
+            margin-left: 5%;
+
+            
+        }
+    }
+
+    /*creating a flex box for the selection section on product detail page */
+
+    .selections{
+      
+
+        flex-direction: column;
+        display:flex;
+        
+        width:250px;
+        margin:auto;
+        
+        gap:15px;
+        justify-content: space-evenly;
+
+        
+    
+        p{
+            padding-right: 10%;
+            text-align: left;
+        }
+
+        
+    }
+
+    #customize-text{
+        align-self: start;
+    }
+    /* editing the size of the drop down menus on product detail page */
+
+    select{
+        width:225px;
+        height: 30px;
+    }
+
+    /* creating a flex box for the price and add to cart button */
+
+    .price-add{
+        padding:15px;
+        display:flex;
+        flex-direction: row;
+        width: 250px;
+        margin: auto;
+       
+        justify-content: space-evenly;
+        align-items: baseline;
+
+        align-self: flex-end;
+        
+    }
+
+    /*editing the add to cart button */
+    .add-to-cart {
+        
+        border: 2px solid black;
+        background-color: yellow;
+        width: 110px;
+        height: 45px;
+        
+        text-align: center;
+        font-style: bold;
+        font-size:18px;
+        
+        
+    }
+    
+    
+/* 
+shopping 
+cart 
+specific css
+*/
+
+/* making the body section of shopping cart a flex box */
+.cart-body{
+    width: 600px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*highlighting the cart text on top of landing */
+.cart-highlight{
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    box-sizing: content-box;
+    width: 70px;
+    
+    background-color: yellow;   
+  
+    font-weight: bold;
+}
+
+
+
+.cart-item{
+    width: 600px;
+    margin-top: 50px; /*creating space betwen the two cart items */
+    
+   
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    img{
+        width: 200px;
+        border: 3px solid #000000;
+        
+    }
+
+    
+    
+}
+
+.descriptions{
+    width: 300px; /*increasing width to ensure that text is aligned to image */
+}
+
+
+
+/*grouping together the image of product and the text remove */
+.image-remove{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-start;
+}
+
+/*modifying the remove text */
+.remove{
+    font-size: small;
+    font-weight: bold;
+    text-decoration: underline;
+    align-content: left;
+    
+}
+
+.price{
+    margin-top: 38px;
+}
+
+#total-line{
+    border-bottom: 3px solid black;
+    width:600px;
+    margin-top: 20px;
+
+}
+
+
+/*formatting the checkout button*/
+.checkout-button {
+    width: 80px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: yellow;
+    margin: 10px auto;
+    text-align: center;
+    font-style: bold;
+    
+  }
+
+
+/* flexbox for total selection: the word total, the actual numerical price, and checkout box*/
+  .total-section{
+    display:flex;
+    flex-direction: row;
+
+  
+    justify-content: flex-end;
+    gap: 200px;
+
+  }
+
+  /*includes the numerical price value and the checkout button */
+  .total-checkout{
+    display:flex;
+    flex-direction: column;
+  }
+
+  /*aligning the numerical price value */
+  .total-price{
+    align-self: flex-end;
+  }
+
+
+ 
+
