@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <head>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <script defer src="js/price.js"></script>
+
+  </head>
+  <title>Product Detail</title>
+  
+  <body>
+
+  <!-- shared header (logo + black stripe) for each page -->
+    <header>
+        
+            <div class="page-top">
+                <div class="logo">
+                <a href="./productgallery.html">
+                <img src="assets/logo/logo-01.svg" alt="shop logo"/> 
+                </a>
+                </div>
+        
+                <div class="sans-logo">
+                    <div class="empty-space"> <!-- using to push navigation lower -->
+        
+                    </div>
+                    <div class="navigation">
+                        <div>
+                        <a  href="./productgallery.html">
+                            <p class="products-highlight">
+                                PRODUCTS
+                            </p>
+                        </a>
+                        </div>
+                        
+                        <div>
+                        <a href="./shoppingcart.html">
+                            <p> 
+                                CART
+                            </p>
+                        </a>
+                        </div>
+                        <div class="empty-navspace">
+        
+                        </div>
+                    </div>
+                    
+        
+                    <div class="black-line"> 
+                
+                    </div>
+                
+                    <div>
+                        <p class="landing-title"> 
+                            Original Cinnamon Roll
+                        </p>
+                    </div>
+                </div>
+                <!-- end of sans logo div; the divi with products, cart, black line, and landing title -->
+            
+            </div> <!-- end of page-top div -->
+            
+        
+    </header>
+
+ 
+    <body?
+    
+
+    <div class="detail-gallery">
+          
+            <div class="detail-image">
+            <img src="assets/products/original-cinnamon-roll.jpg" alt="original cinnamon roll" /> 
+            </div>
+
+        <div class="selections">
+            <div id="customize-text">
+            <p>Customize our delicious, hand-made cinnamon rolls to your liking!</p>
+            </div>
+
+            
+            <div>
+            <label for="glaze" id="glaze"> Glazing:</label>
+            </div>
+            <div>
+                <select name="glaze" id="glazingOptions" onchange="glazingChange(this)">
+                    
+                </select>
+            </div>
+            <div>
+                <label for="pack" id="pack">Pack Size:</label>
+            </div>
+            <div>
+                <select name="pack-size" id="pack-size">
+                
+                </select>
+            </div>
+                
+        
+            <div class="price-add">
+                <div class="price">
+                    <p>$2.49</p>
+                </div>
+                <button class="add-to-cart">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+        
+
+         
+    </div>
+
+
+
+</body>
+</html>
