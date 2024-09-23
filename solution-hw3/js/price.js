@@ -22,7 +22,7 @@ let glazingOptions = [
 
 ]
 
-let packSelections = [
+let packOptions = [
     {
         packSize: "1",
         packPrice: 1,
@@ -36,83 +36,54 @@ let packSelections = [
         packPrice: 5,
     },
     {
-        packSize: "10",
+        packSize: "12",
         packPrice: 10,
     }
 
 ]
 
-// let glazingDisplay = document.getElementById(glazingOptions);
 
+//populating the glaze select dropdown menu
 let selectElementGlaze = document.querySelector('#glazingOptions')
 
     
     for(let i = 0; i < glazingOptions.length; i++){
         var optionElementGlaze = document.createElement("option");
 
-        optionElementGlaze.textContent = glazingOptions[i].glaze; 
+        optionElementGlaze.text = glazingOptions[i].glaze; 
         optionElementGlaze.value = glazingOptions[i].glazingPrice;
-        selectElementGlaze.appendChild(optionElementGlaze);
-
-        
-        
-       
+        selectElementGlaze.appendChild(optionElementGlaze); 
     }
 
+
+//populating the pack size select dropdown menu
 let selectElementPack = document.querySelector('#pack-size')
     for(let i = 0; i < glazingOptions.length; i++){
-
         var optionElementPack = document.createElement("option");
-        optionElementPack.textContent = packSelections[i].packSize; 
-        optionElementPack.value = packSelections[i].packPrice;
-        selectElementPack.appendChild(optionElementPack);
-
-     
         
+        optionElementPack.text = packOptions[i].packSize; 
+        optionElementPack.value = packOptions[i].packPrice;
+        selectElementPack.appendChild(optionElementPack);     
+    }
+
+const baseprice = parseFloat(2.49); //initializing the constant base price 
+let price = 0; //initializing price which will be used in the price calculation; just setting to 0 to start
+
+
+let priceText = document.getElementById("priceText"); //initializing the variable that will be used to change html 
+
+function glazingChange(){
+    const glazePriceTest = document.getElementById("glazingOptions"); //accessing the html values created from the objects in js
+    const packPriceTest = document.getElementById("pack-size");
+
+    let glazePriceTestChange = glazePriceTest.value; //assigning a variable the value of the selected option
+    let packPriceTestChange = packPriceTest.value;
+
+    glazePriceTestChange = parseFloat(glazePriceTestChange); //changing the variable into a integer
+    packPriceTestChange = parseFloat(packPriceTestChange);
+
+    price = (baseprice + glazePriceTestChange) * packPriceTestChange; //calculating
+
+    price = price.toFixed(2); //making sure this calculation only has two decimal places
+    priceText.innerHTML = "$" + price; //chaning the html 
 }
-
-    
-    /*
-
-    for(element in langArray)
-        {
-           
-           opt.value= index;
-           ; // whatever property it has
-        
-           // then append it to the select element
-           ;
-           index++;
-        }
-    let glazeOption = document.querySelector('#car-title');
-    let carInfoElement = document.querySelector('#car-info');
-  
-    carTitleElement.innerText = car.model;
-    carInfoElement.innerText = car.description;
-    var option = document.createElement('option');
-    option.
-    8/
-  }
-
-
-function glazingChange(element) {
-    
-    console.log("1");
-    
-    
-
-}
-*/
-
-
-/*
-get element by id for glaze and pack size
-find the value 
-
-do console log to see if storing 
-plug into equation
-convert into number 
-print what type of variable it is 
-
-.innerhtml allows you to edit on screen 
-*/
