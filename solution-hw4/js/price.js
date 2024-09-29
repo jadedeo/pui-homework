@@ -32,7 +32,7 @@ let packOptions = [
         packPrice: 3,
     },
     {
-        packSize: "5",
+        packSize: "6",
         packPrice: 5,
     },
     {
@@ -66,9 +66,8 @@ let selectElementPack = document.querySelector('#pack-size')
         selectElementPack.appendChild(optionElementPack);     
     }
 
-const baseprice = rolls[chosenRoll]["basePrice"];; //initializing the constant base price 
-console.log(baseprice);
-
+    
+const baseprice = rolls[chosenRoll]["basePrice"];; //initializing the constant base price based on selection 
 let price = 0; //initializing price which will be used in the price calculation; just setting to 0 to start
 
 

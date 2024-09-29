@@ -30,8 +30,7 @@ const rolls = {
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const chosenRoll = params.get('roll')
-console.log(chosenRoll);
-console.log(typeof chosenRoll);
+
 
 
 //setting the landing title to the corresponding roll 
