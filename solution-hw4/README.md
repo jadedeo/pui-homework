@@ -1,4 +1,4 @@
-# PUI homework 3
+# PUI homework 4
 
 Deployed website: https://aogle17.github.io/pui-homework/solution-hw4/productgallery.html
 
