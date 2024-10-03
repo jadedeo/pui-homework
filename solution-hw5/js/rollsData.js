@@ -71,6 +71,7 @@ class Roll {
 function addToCart() {
 
     const rollGlaze = document.getElementById("glazingOptions");
+    console.log(rollGlaze);
     const packSize = document.getElementById("pack-size");
 
     let glazeNewObject = rollGlaze.options[rollGlaze.selectedIndex];
@@ -83,4 +84,6 @@ function addToCart() {
     cart.push(cartRoll);
     console.log(cart);
 }
+
+
 

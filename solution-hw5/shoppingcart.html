@@ -3,17 +3,25 @@
   <meta charset="UTF-8">
   <head>
     <link rel="stylesheet" href="./style.css" type="text/css" />
-
+   
+    <script src="js/price.js"></script>
+    <script defer src="js/cart.js"></script>
+    
   </head>
-  <title>Product Gallery</title>
+  <title>Shopping Cart</title>
   
   <body>
-  
-    <!-- shared header (logo + black stripe + navigation + landing title) for each page -->
-    <header>
+
+  <!-- shared header (logo and black stripe) for each page -->
+    
+    
+  <header>
+        
     <div class="page-top">
         <div class="logo">
-        <img src="assets/logo/logo-01.svg" alt="shop logo"/> 
+        <a href="./productgallery.html">
+            <img src="assets/logo/logo-01.svg" alt="shop logo"/> 
+        </a>
         </div>
 
         <div class="sans-logo">
@@ -23,14 +31,14 @@
             <div class="navigation">
                 <div>
                 <a  href="./productgallery.html">
-                    <p class="products-highlight">
-                        PRODUCTS
+                    <p>
+                        PRODUCTS 
                     </p>
                 </a>
                 </div>
                 <div>
                 <a href="./shoppingcart.html">
-                    <p> 
+                    <p class="cart-highlight">
                         CART
                     </p>
                 </a>
@@ -46,7 +54,9 @@
             </div>
         
             <div>
-            <p class="landing-title"> Our Hand-Made Cinnamon Rolls </p>
+                <p class="landing-title"> 
+                   Shopping Cart
+                </p>
             </div>
         </div>
         <!-- end of sans logo div; the divi with products, cart, black line, and landing title -->
@@ -54,129 +64,68 @@
     </div> <!-- end of page-top div -->
     
 
-  </header>
-  <main>
-
-    
-
-
-    <div class="gallery">
-
-     
-        <div class ="first-row">
-            <a href="./productdetail.html">
-            <div class="full-item">
-                <img src="assets/products/original-cinnamon-roll.jpg" alt="original cinnamon roll" /> 
-                <div class="item-name">
-                <a href="./productdetail.html">
-                <p>
-                    Original Cinnamon Rolls
-                </p>
-                </a>
+</header>  
+  <div class="cart-body">
+        <template id="shopping-cart-item">
+            <div class="cart-item">
+                <div class="image-remove">
+                    <div>
+                        <img id="shoppingCartImage"/> 
+                    </div>
+                    <div class="remove">
+                        Remove 
+                    </div>
                 </div>
-                <p>
-                $2.49
-                </p>
-            </div>
-            </a>
-       
-            <a href="./productdetail.html">
-            <div class="full-item">
-                <img src="assets/products/apple-cinnamon-roll.jpg" alt="apple cinnamon roll" />
-                <div class="item-name">
-                <a href="./productdetail.html">
-                <p>
-                Apple Cinnamon Roll
-                </p>
-                </a>
-                </div>
-                <p>
-                $3.49
-                </p>
-            </div>
-            </a>
-       
-            <a href="./productdetail.html">
-            <div class="full-item">
-                <img src="assets/products/raisin-cinnamon-roll.jpg" alt="raisin cinnamon roll" /> 
-                <div class="item-name">
-                <a  href="./productdetail.html">
-                <p>
-                    Raisin Cinnamon Roll
-                </p>
-                </a>
-                </div>
-                <p>
-                $2.99 
-                </p>
-            </div>
-            </a>
-        </div>
-        
-        <div class="second-row">
-            <a href="./productdetail.html">
-            <div class="full-item">
-                <img src="assets/products/walnut-cinnamon-roll.jpg" alt="walnut cinnamon roll" />
-                <div class="item-name">
-                <a  href="./productdetail.html">
-                <p> 
-                Walnut Cinnamon Roll
-                </p>
-                </a>
-                </div>
-                <p>
-                $3.49 
-                </p>
-            </div>
-            </a>
+                <div class="descriptions">
+                    <div>
+                        <p id="rollSelection"> 
+                        
+                        </p>
+                    </div>
+                    <div>
+                        <p id="glazeSelection">
+                            
+                        </p>
+                    </div>
+                    <div>
+                        <p id="packSelection">
+                        
+                        </p>
+                    </div>
+                </div><!-- end of descriptions div -->
+                
 
-            <a href="./productdetail.html">
-            <div class="full-item">
-                <img src="assets/products/double-chocolate-cinnamon-roll.jpg" alt="double chocolate cinnamon roll" /> 
-                <div class="item-name">
-                <a href="./productdetail.html">
-                <p> 
-                    Double Chocolate Cinnamon roll
-                </p>
-                </a>
+                <div class="price">
+                    <p id="cart-price">
+                    
+                    </p>
                 </div>
-                <p>
-                $3.99
-                </p>
-            </div>
-            </a>
+            </div> <!-- end of cart-item div for cinnamon roll-->
+        </template>
 
-            <a href="./productdetail.html">
-            <div class="full-item">
-                <img src="assets/products/strawberry-cinnamon-roll.jpg" alt="strawberry cinnamon roll" /> 
-                <div class="item-name">
-                <a  href="./productdetail.html">
-                <p>
-                    Strawberry Cinnamon Roll
-                </p>
-                </a>
-                </div>
-                <p>
-                $3.99
-                </p>
-            </div>
-            </a>
-        </div>
-        
-
-       
-        
-      
-      
-
+    <div id="total-line">
 
     </div>
 
-
-
-  </main>
-
-  
-
-  </body>
+    <div class="total-section">
+        <div class="word-total">
+            <p>
+            Total: 
+            </p>
+        </div>
+        <div class="total-checkout">
+            <div class="total-price">
+                <p>
+                $29.94
+                </p>
+            </div>
+            <button class="checkout-button">
+                Checkout
+            </button>
+        </div><!-- end of price checkout div -->
+     
+    </div><!-- end of total selection div -->
+</div> 
+<!-- end of cart body div; entire body section of shopping cart page -->
+</body>
 </html>

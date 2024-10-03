@@ -45,7 +45,7 @@ let packOptions = [
 
 //populating the glaze select dropdown menu
 let selectElementGlaze = document.querySelector('#glazingOptions')
-
+console.log(selectElementGlaze);
     
     for(let i = 0; i < glazingOptions.length; i++){
         var optionElementGlaze = document.createElement("option");
@@ -89,3 +89,4 @@ function glazingChange(){
     price = price.toFixed(2); //making sure this calculation only has two decimal places
     priceText.innerHTML = "$" + price; //chaning the html 
 }
+
