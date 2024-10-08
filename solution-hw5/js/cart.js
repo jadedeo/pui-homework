@@ -23,8 +23,9 @@ class Roll {
        
       for(let i = 0; i <glazingOptions.length; i++){
          
-       if(this.type == glazingOptions[i].glaze){
+       if(this.glazing == glazingOptions[i].glaze){
            this.glazePrice = glazingOptions[i].glazingPrice;
+           console.log(this.glazePrice);
          }
        }
      }
@@ -34,6 +35,7 @@ class Roll {
         
         if(this.size == packOptions[i].packSize){
             this.packPrice = packOptions[i].packPrice;
+            console.log(this.packPrice);
         }
       }
     }
