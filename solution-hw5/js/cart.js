@@ -9,9 +9,43 @@ class Roll {
         this.glazing =  rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
+        
+        //initializing variables for calculating prices
+        this.fullPrice = null;
+        this.glazePrice = 0;
+        this.packPrice = 1;
+        
         this.element = null;
+       
     }
-}
+
+    getGlazePrice(){
+       
+      for(let i = 0; i <glazingOptions.length; i++){
+         
+       if(this.type == glazingOptions[i].glaze){
+           this.glazePrice = glazingOptions[i].glazingPrice;
+         }
+       }
+     }
+
+    getPackPrice(){
+       for(let i = 0; i <packOptions.length; i++){
+        
+        if(this.size == packOptions[i].packSize){
+            this.packPrice = packOptions[i].packPrice;
+        }
+      }
+    }
+
+    calculateTotalPrice(){
+      this.getGlazePrice();
+      this.getPackPrice();
+      this.fullPrice = (this.glazePrice + this.basePrice) * this.packPrice;
+      this.fullPrice = this.fullPrice.toFixed(2);
+      return this.fullPrice;
+    }
+  }//end of class roll 
 
 //constructing objects for display on shopping cart page
 let originalRoll = new Roll("Original","Sugar Milk", 1, 2.49);
@@ -29,7 +63,6 @@ cart.push(appleRoll);
 console.log(cart);
 
 function createElement(cartitem) {
-    // make a clone of the notecard template
     const template = document.querySelector('#shopping-cart-item');
     const clone = template.content.cloneNode(true);
     
@@ -38,57 +71,65 @@ function createElement(cartitem) {
     const btnDelete = cartitem.element.querySelector('.remove');
     btnDelete.addEventListener('click', () => {
       deleteNote(cartitem);
-
+      calculateTotalPrice();
     })
 
-    // add the notecard clone to the DOM
-    // find the notecard parent (#notecard-list) and add our notecard as its child
     const rollCartElement = document.querySelector('.cart-body');
     rollCartElement.prepend(cartitem.element);
-    
-    // populate the notecard clone with the actual notecard content
-    updateElement(cartitem);
 
-  
+    updateElement(cartitem);
   }
 
 
   function deleteNote(cartitem) {
-    // remove the notecard DOM object from the UI
     cartitem.element.remove();
-    // remove the actual Notecard object from our set of notecards
-    cart.delete(cartitem);
+
+    for(let i = 0; i <cart.length; i++){
+      if(cartitem.type == cart[i].type){
+          cart.splice(i, i+1);
+        }
+      }
   }
   
   function updateElement(cartitem) {
-    // get the HTML elements that need updating
     const cartImageElement = cartitem.element.querySelector("#shoppingCartImage");
     const cartTypeElement = cartitem.element.querySelector('#rollSelection');
     const cartGlazeElement = cartitem.element.querySelector('#glazeSelection');
     const cartPackElement = cartitem.element.querySelector('#packSelection');
     const cartPriceElement = cartitem.element.querySelector('#cart-price');
     
-    // copy our notecard content over to the corresponding HTML elements
-    //noteImageElement.src = notecard.noteImageURL;
     cartImageElement.src = "assets/products/" + cartitem.type.toLowerCase()+"-cinnamon-roll.jpg";
     cartTypeElement.innerText = cartitem.type + " Cinnamon Roll";
     cartGlazeElement.innerText = "Glazing: " + cartitem.glazing;
     cartPackElement.innerText = "Pack Size: " + cartitem.size;
-    cartPriceElement.innerText = "$" + cartitem.basePrice;
+    cartPriceElement.innerText = "$" + cartitem.calculateTotalPrice();
   }
 
-  function priceCalculation(cartitem){
-    //const rollGlaze = document.getElementById("glazingOptions");
-    //const packSize = document.getElementById("pack-size");
-    //console.log(rollGlaze)
-
-    //let glazePrice = rollGlaze[cartitem.glazing];
-   //glazePrice = glazeNewObject.value;
-    console.log(glazingOptions[0].glazingPrice);
-  }
 createElement(originalRoll);
 createElement(walnutRoll);
 createElement(raisinRoll);
 createElement(appleRoll);
 
-priceCalculation(walnutRoll);
+
+//calculating total cart price 
+const cartTotalPrice = document.querySelector("#total-cart-price");
+let cartPrice = 0;
+for (let i = 0; i < cart.length; i++){
+  cartPrice = cartPrice + parseFloat(cart[i].fullPrice);
+}
+cartTotalPrice.innerText = "$" + cartPrice;
+
+
+
+
+function calculateTotalPrice(){
+  let cartPrice = 0;
+  for (let i = 0; i < cart.length; i++){
+    cartPrice = cartPrice + parseFloat(cart[i].fullPrice); 
+  }
+  cartTotalPrice.innerText = "$" + cartPrice;
+}
+
+
+
+
