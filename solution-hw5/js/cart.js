@@ -25,7 +25,6 @@ class Roll {
          
        if(this.glazing == glazingOptions[i].glaze){
            this.glazePrice = glazingOptions[i].glazingPrice;
-           console.log(this.glazePrice);
          }
        }
      }
@@ -35,7 +34,6 @@ class Roll {
         
         if(this.size == packOptions[i].packSize){
             this.packPrice = packOptions[i].packPrice;
-            console.log(this.packPrice);
         }
       }
     }
