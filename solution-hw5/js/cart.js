@@ -60,7 +60,8 @@ cart.push(raisinRoll);
 let appleRoll = new Roll("Apple", "Original", 3, 3.49);
 cart.push(appleRoll);
 
-console.log(cart);
+//calculating total cart price 
+
 
 function createElement(cartitem) {
     const template = document.querySelector('#shopping-cart-item');
@@ -86,7 +87,7 @@ function createElement(cartitem) {
 
     for(let i = 0; i <cart.length; i++){
       if(cartitem.type == cart[i].type){
-          cart.splice(i, i+1);
+          cart.splice(i, 1);
         }
       }
   }
@@ -105,13 +106,13 @@ function createElement(cartitem) {
     cartPriceElement.innerText = "$" + cartitem.calculateTotalPrice();
   }
 
+
+
 createElement(originalRoll);
 createElement(walnutRoll);
 createElement(raisinRoll);
 createElement(appleRoll);
 
-
-//calculating total cart price 
 const cartTotalPrice = document.querySelector("#total-cart-price");
 let cartPrice = 0;
 for (let i = 0; i < cart.length; i++){
@@ -120,15 +121,17 @@ for (let i = 0; i < cart.length; i++){
 cartTotalPrice.innerText = "$" + cartPrice;
 
 
-
-
 function calculateTotalPrice(){
   let cartPrice = 0;
   for (let i = 0; i < cart.length; i++){
-    cartPrice = cartPrice + parseFloat(cart[i].fullPrice); 
+    cartPrice = cartPrice + parseFloat(cart[i].fullPrice);
   }
   cartTotalPrice.innerText = "$" + cartPrice;
 }
+
+
+
+
 
 
 
