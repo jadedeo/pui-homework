@@ -43,6 +43,7 @@ let packOptions = [
 ]
 
 
+
 //populating the glaze select dropdown menu
 let selectElementGlaze = document.querySelector('#glazingOptions')
 console.log(selectElementGlaze);
@@ -90,3 +91,25 @@ function glazingChange(){
     priceText.innerHTML = "$" + price; //chaning the html 
 }
 
+//creating the URL parameters; searching for links with question mark
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const chosenRoll = params.get('roll')
+
+
+
+//setting the landing title to the corresponding roll 
+const headerElement = document.querySelector('.landing-title-detail');
+if (chosenRoll === null){
+    headerElement.innerText = "Original Cinnamon Roll";
+    
+}
+else{
+    headerElement.innerText = chosenRoll + " Cinnamon Roll";
+}
+
+
+
+//set the gallery page image to the corresponding roll
+let detailImage = document.querySelector("#detail-image"); 
+detailImage.src = "assets/products/" + rolls[chosenRoll]["imageFile"];

@@ -17,6 +17,7 @@ class Roll {
         
         this.element = null;
        
+        this.calculateTotalPrice();
     }
 
     getGlazePrice(){
@@ -43,7 +44,6 @@ class Roll {
       this.getPackPrice();
       this.fullPrice = (this.glazePrice + this.basePrice) * this.packPrice;
       this.fullPrice = this.fullPrice.toFixed(2);
-      return this.fullPrice;
     }
   }//end of class roll 
 
@@ -103,7 +103,7 @@ function createElement(cartitem) {
     cartTypeElement.innerText = cartitem.type + " Cinnamon Roll";
     cartGlazeElement.innerText = "Glazing: " + cartitem.glazing;
     cartPackElement.innerText = "Pack Size: " + cartitem.size;
-    cartPriceElement.innerText = "$" + cartitem.calculateTotalPrice();
+    cartPriceElement.innerText = "$" + cartitem.fullPrice;
   }
 
 
@@ -126,7 +126,7 @@ function calculateTotalPrice(){
   for (let i = 0; i < cart.length; i++){
     cartPrice = cartPrice + parseFloat(cart[i].fullPrice);
   }
-  cartTotalPrice.innerText = "$" + cartPrice;
+  cartTotalPrice.innerText = "$" + cartPrice.toFixed(2);
 }
 
 
