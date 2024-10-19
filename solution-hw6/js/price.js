@@ -79,7 +79,6 @@ else{
     headerElement.innerText = chosenRoll + " Cinnamon Roll";
 }
 
-
     
 //set the gallery page image to the corresponding roll
 let detailImage = document.querySelector("#detail-image"); 
