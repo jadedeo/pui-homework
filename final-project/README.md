@@ -205,7 +205,7 @@ How would you use Generative AI responsibly?
 
 ### *Idea 1*
 
-![Wireframe for Artist Web Porfolio](images/sketch1.png)
+![Wireframe for Artist Web Porfolio](/images/artist_portfolio_sketch.jpg)
 
 * What is the basic idea of your final project? 
 To create a website portfolio for one of my favorite artists.
