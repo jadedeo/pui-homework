@@ -236,7 +236,7 @@ Including auditory components
 I want people to understand how to read a label for a variety of goods from clothing to laundry detergent and understand whether the label actually conveys an actually sustainable product. (Example: including the word natural on a label is done as a way to convey sustainability but the opposite can be true). Equipping people to recognize greenwashing and how to pursue alternatives. 
 
 ### *Idea 3*
-
+![Wireframe for Skincare Routine Quiz](images/skincare_routine_sketch.JPG)
 
 * What is the basic idea of your final project? 
 To create a quiz that will receive input about an individual’s skin type, concerns, and goals to generate a personalized route. 
