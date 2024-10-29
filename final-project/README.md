@@ -205,7 +205,7 @@ How would you use Generative AI responsibly?
 
 ### *Idea 1*
 
-![Wireframe for Artist Web Porfolio](/images/artist_portfolio_sketch.jpg)
+![Wireframe for Artist Web Porfolio](images/artist_portfolio_sketch.jpg)
 
 * What is the basic idea of your final project? 
 To create a website portfolio for one of my favorite artists.
@@ -221,7 +221,7 @@ Including auditory components
 Timeline of the major events in the artist’s life, their actual work, and their influences along with how they were influential 
 
 ### *Idea 2*
-
+![Wireframe for Spot the Greenwashing](images/artist_portfolio_sketch.jpg)
 * What is the basic idea of your final project? 
 To create a quiz that will inform individuals about what greenwashing is and how to spot it.
 
