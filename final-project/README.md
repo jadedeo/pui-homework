@@ -122,8 +122,7 @@ Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-gener
 
 ## Project Description
 
-Briefly restate your motivation and a short description of your project.
-My project will be an interactive quiz on greenwashing. My motivation for this project arose from my own investment in environmental concern/issues. It is very easy for companies to present misleading environmental claims so I want to help people 
+My project will be an interactive quiz on greenwashing. My motivation for this project arose from my own investment in environmental concern/issues. It is very easy for companies to present misleading environmental claims so I want to educate people on how to identify misleading claims which is greenwashing. 
 
 ## High-Fi Prototypes
 
@@ -131,20 +130,20 @@ My project will be an interactive quiz on greenwashing. My motivation for this p
 
 ![Intro Protoqype](images/FP2_Images/prototype_1.png)
 
-The user feedback for this prototype was helpful, positive, and constructive. Users noted that they enjoyed the color palette the overall aesthetic of the website. Users were also enthusiatic about the growing flower component, which was reassuring to hear confirmation that the flower was interactive. Notes on word choices (wrong vs incorrect) and font sizes further aided in my design. 
+The user feedback for this prototype was helpful, positive, and constructive. Users noted that they enjoyed the color palette and the overall aesthetic of the website. Users were also enthusiatic about the growing flower component, which was reassuring to hear confirmation that the flower was engaging. Notes on word choices (wrong vs incorrect) and font sizes further aided in my design. 
 
 
 ### *Prototype 2*
 ![Question Prototype](images/FP2_Images/prototype_2.png)
-The user feedback for this prototype was helpful, positive, and constructive. Users found the quiz straightforward to engage with and found the background information to be helpful/educating. User 1 noted that they understand that I was trying to achieve a minimalist aesthetic but was not quite achieving it on my first round. They provided helpful critiques to actually achieve 
+The user feedback for this prototype was helpful, positive, and constructive. Users found the quiz straightforward to engage with and found the background information to be helpful/educating. User 1 noted that they understand that I was trying to achieve a minimalist aesthetic but was not quite achieving it on my first round. They provided helpful critiques to actually achieve this goal. 
 
 ## Usability Test
 
 The user feedback I received during both of my usability tests were incredibly helpful. One reassuring component was that none of my users were confused by how to interact with the quiz. Because my quiz is very straightforward and simple in design, having any source of confusion can be a major bottleneck and greatly impact the user experience. 
 
-My users were able to provide me with positive reassurance along with helpful feedback on how I could improve. User 1 provided me with great insights on how to improve my design. They suggested that I should change the layout for q section and to use a card instead of the line segmenting I was doing to create a more minimalist layout. Upon receiving their feedback, I realized that I should have not created a new layout for the feedback component of the quiz and realized that it made more sense to use the same format for the sake of consistent (the other layout just looked random)
+My users were able to provide me with positive reassurance along with helpful feedback on how I could improve. User 1 provided me with great insights on how to improve my design. They suggested that I should change the layout for q section and to use a card instead of the line segmenting I was doing to create a more minimalist layout. Upon receiving their feedback, I realized that I should have not created a new layout for the feedback component of the quiz and realized that it made more sense to use the same format for the sake of consistent (the other layout just looked random).
 
-I did not implement all of User 1's suggestion on text size. They informed me that size 16 was general the web standard. I found that using this size on components such as the intro page, the greenwashing definition page, and the instruction page would have resulted in an unbalanced composition. The small size of the words would result in them looking disproportionate. I did not want to write long paragraphs, as a way to aid user engagement and decrease cognitive load, and this would have be the avenue to pursue for restoring the balance of the page. 
+I did not implement all of User 1's suggestion on text size. They informed me that size 16 was general the web standard. I found that using this size on components such as the intro page, the greenwashing definition page, and the instruction page would have resulted in an unbalanced composition. The small size of the text would result in the paragraphs looking disproportionate. I did not want to write long paragraphs, as a way to aid user engagement and decrease cognitive load, and this would have be the avenue to pursue for restoring the balance of the page. 
 
 User 2 provided helpful feedback on the emotional response of using the quiz. They found the experience to be soothing due to the chosen images and color palette. 
 
@@ -152,25 +151,27 @@ User 2 helped me to make edits to the text component of the instructions. They t
 
 User 2 suggested that I should shrink the images on the definition page. I did intitially test out this suggestion, but decided to stick with it. I did not find that it help to enhance the overall page and thought it looked awkward compared to the original design. 
 
-Overall, I found my user studies to be incredibly helpful
+Overall, I found my user studies to be incredibly helpful.
 
 ## Updated Designs
 ![Old Question Layout](images/FP2_Images/old_q.png)
 ![New Question Layout](images/FP2_Images/new_q.png)
 
-My layout was completely revamped. I removed the line as User 1 believed that it did not add anything to the overall layout. I created a card for the Q1 layout as User 1 noted that this might help me to create a more minimalist design. I changed the card on the feedback page from purple to beige as User 2 noted that they found the purple color to be harsh and agreesive 
+My layout was completely revamped. I removed the line as User 1 believed that it did not add anything to the overall layout. I created a card for the Q1 layout as User 1 noted that this might help me to create a more minimalist design. I change the designation of question for a landing to being a shorthand in an ellipse for a more minimalist design. I changed the card on the feedback page from purple to beige as User 2 noted that they found the purple color to be harsh and agreesive. I made my buttons smaller as the user noted that my text was too big. I made the layout for the feedback (page that informs you whether correct or incorrect) to be the same as the q page layouts to create a more streamlined and consistent look.
 
 ![Old Prototype](images/FP2_Images/old_p_1.png)
-I changed the text content on the instruction component of prototype 1. User 1 noted that the word choice "wrong" was harsh, we decided to change it to "incorrect." They noted that they enjoyed the animation component of the flower. I removed the 
+![New Prototype](images/FP2_Images/new_p1.png)
+I changed the text content on the instruction component of prototype 1. User 1 noted that the word choice "wrong" was harsh, we decided to change it to "incorrect." They noted that they enjoyed the animation component of the flower. The text component was edited to be more concise and to get rid of grammatical errors (missing commas and periods).
 
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
 
 ## Feedback Summary
 
 The feedback in the lab session was for when I was pursuing another project idea. Therefore, I do not have entirely relevant feedback for this project. It is relevant in some capacity, as receiving this feedback made me realize that I should pursue another topic.
 
-This was because while I was receiving feedback for my old project, which was a skincare quiz for establishing a routine, I realized how little excitement I had for that project. Any positive reinforcement or helpful pivots I received had very little impact on me. I was not eager to implement them or I did not feel validated by positive comments. I decided it would be best to change my project to another topic that would excite me more. I want to be excited by my topic as this will allow me to feel motivated while I am facing the inevitable bugs and technical issues that will come with working on this project. Because we have not actually started coding for this project, this is final point at which I could possible change my project.
+This was because while I was receiving feedback for my old project, which was a skincare quiz for establishing a routine, I realized how little excitement I had for that project. Any positive reinforcement or helpful pivots I received had very little impact on me. I was not eager to implement them or I did not feel validated by positive comments. I decided it would be best to change my project to another topic that would excite me more. 
+
+I want to be excited by my topic as this will allow me to feel motivated while I am facing the inevitable bugs and technical issues that will come with working on this project. Because we have not actually started coding for this project, this is final point at which I could possible change my project.
 
 The experience of working on my new prototype for my new project idea validated my decision. I already felt more engaged with the process. 
 
