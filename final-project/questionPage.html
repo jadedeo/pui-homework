@@ -1,38 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <link rel="stylesheet" href="./css/questionPage.css" type="text/css" />
+        <link rel="stylesheet" href="./css/explainerPage.css" type="text/css" />
+        <script defer src="js/questionPopulation.js"></script>
+    </head>
+
     <title>Spot the Greenwashing</title>
-</head>
-<body>
-   <template id="questionLayout">
-    <!-- should i make questionTextBox a section -->
-        <div id="questionTextBox"> 
-            <!-- <img> -->
-            <div>
-                <img id="questionImage"/> 
-                
-                
-            </div>
-                <h1 id="questionText">
-                    Is this label greenwashing?
-                </h1>
-                <p id="indepthQuestionText">
-                    
-                </p>
-            <div>
-                <button> Yes </button>
-                <button> No </button>
-            </div>
-
-        </div>
-
     
-   </template>
-   <section id="flower">
-    <img src="images/questionPage/flower.png" alt="pink flower with green stem and leaves"/>
-   </section>
+    <body>
    
 
-   
-</body>
+      <div class="quiz-container" style="display:block;">
+        <div id="quiz">
+            <div id="questionContent">
+                <div id="questionNum">
+                    
+                </div>
+                <div>
+                    <img class="questionImage"/> 
+                    
+                    
+                </div>
+                    <h1 id="questionText">
+                        Is this label greenwashing?
+                    </h1>
+                    <p id="indepthQuestionText">
+                        
+                    </p>
+                <div>
+                    <button id="yesButton" value="yes"> Yes </button>
+                    <button id="noButton" value="no"> No </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="responseContent" style="display:none;">
+        <img class="questionImage"/> 
+        <h1 id="accuracy"> 
+            <!-- whether or not a user answered correctly -->
+        </h1>
+        <p id="explainerText">
+
+        </p>
+        <p id="addtResources"></p>
+
+        </p>
+        <button id="nextQuestion" value="next"> Q </button>
+    </div>
+
+    <div id="resultsPage" style="display:none;">
+        <h1 id="quizResults"> 
+            <!-- whether or not a user answered correctly -->
+        </h1>
+        <p id="moreResources">
+
+        </p>
+    </div>
+
+  
+
+    <section id="flower">
+        <img src="assets/questionPage/flower.png" alt="pink flower with green stem and leaves"/>
+    </section>
+    </body>
 </html>
