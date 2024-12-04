@@ -1,7 +1,6 @@
 
 //array containing all the question content 
 
-//import gsap from 'gsap';
 
 const questions = {
   1: {

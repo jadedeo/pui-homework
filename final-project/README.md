@@ -9,7 +9,9 @@ Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/
 ## Part 1: Website Description
 
 Describe your website (300 words).
-
+The purpose of my website is teach about what greenwashing is and how to identify greenwashing. I want to teach individuals about this issue as a way to ensure that they are empowered to make more climate-conscious decisions. A, because as consumers, we have very little control over the environmental practices and impact of companies. However, where we choose to spend our money yields some limited influence on however companies act. Additionally, an individual might 
+My target audience are individuals who are trying to become more aware about making environmentally-conscious choices or indivduals who are trying to ensure that their current understanding of greenwashing is accurate. Along with individuals who might need a refresher on greenwashing. 
+I want to convey to indivdiuals three
 * What is the purpose of your website?   
 * Who is the target audience?  
 * What information do you convey with your website?   
