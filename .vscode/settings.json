@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.sendKeybindingsToShell": false,
+    "explorer.autoRevealExclude": {
+        "**/node_modules": false
+    }
+}

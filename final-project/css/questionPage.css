@@ -1,11 +1,12 @@
-
+/****** CS For Entire Page *****/
 body {
     background: #43A977;
     
 }
 
-#questionContent{
-    width: 715px;
+
+.contentContainer{
+    width: 800px;
     height: 255px;
     background-color: #f7f5e6;
     border-radius: 15px;
@@ -15,4 +16,25 @@ body {
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     
+}
+
+
+
+#quizContentEntire{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/****** CS For Question Content Only *****/
+.questionTextContent{
+    display:flex;
+    flex-direction: column;
+}
+
+.questionButtons{
+    display:flex;
+    flex-direction: row;
 }

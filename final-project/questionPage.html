@@ -4,7 +4,9 @@
     <head>
         <link rel="stylesheet" href="./css/questionPage.css" type="text/css" />
         <link rel="stylesheet" href="./css/explainerPage.css" type="text/css" />
+        <script defer src="js/gsap.min.js"></script>
         <script defer src="js/questionPopulation.js"></script>
+        <script defer src="js/floweranimation.js"></script>
     </head>
 
     <title>Spot the Greenwashing</title>
@@ -12,57 +14,65 @@
     <body>
    
 
-      <div class="quiz-container" style="display:block;">
-        <div id="quiz">
-            <div id="questionContent">
+      <div id="quizContentEntire" style="display:flex">
+
+        <div i="quizContentSansFlower">
+            <div class="contentContainer" id="questionContent">
                 <div id="questionNum">
                     
                 </div>
+    
                 <div>
                     <img class="questionImage"/> 
                     
                     
                 </div>
-                    <h1 id="questionText">
-                        Is this label greenwashing?
-                    </h1>
-                    <p id="indepthQuestionText">
+                    <div id="questionTextContent">
+                        <h1 id="questionText">
+                            Is this label greenwashing?
+                        </h1>
+                        <p id="indepthQuestionText">
                         
-                    </p>
-                <div>
+                        </p>
+                    </div>
+                <div id="questionButtons">
                     <button id="yesButton" value="yes"> Yes </button>
                     <button id="noButton" value="no"> No </button>
                 </div>
             </div>
+   
+        <div class="contentContainer" id="responseContent" style="display:none;">
+            <img class="questionImage" alt=""/> 
+            <h1 id="accuracy"> 
+                "Your answer was..."
+                <!-- populating with text before being displayed as a way to ensure that the header is not interpreted as empty -->
+            </h1>
+            <p id="explainerText">
+
+            </p>
+            <p id="addtResources"></p>
+
+            </p>
+            <button id="nextQuestion" value="next"> Q </button>
         </div>
-    </div>
-    <div id="responseContent" style="display:none;">
-        <img class="questionImage"/> 
-        <h1 id="accuracy"> 
-            <!-- whether or not a user answered correctly -->
-        </h1>
-        <p id="explainerText">
 
-        </p>
-        <p id="addtResources"></p>
+         <div class="contentContainer" id="resultsPage" style="display:none;">
+            <h1 id="quizResults"> 
+                "You received _ out of _ answers correctly"
+                <!-- populating with text before being displayed as a way to ensure that the header is not interpreted as empty -->
+            </h1>
+            <p id="moreResources">
+                Here are some resources for learning more about greenwashing!
 
-        </p>
-        <button id="nextQuestion" value="next"> Q </button>
-    </div>
-
-    <div id="resultsPage" style="display:none;">
-        <h1 id="quizResults"> 
-            <!-- whether or not a user answered correctly -->
-        </h1>
-        <p id="moreResources">
-
-        </p>
+            </p>
+        </div>
     </div>
 
   
 
     <section id="flower">
-        <img src="assets/questionPage/flower.png" alt="pink flower with green stem and leaves"/>
+        <img src="assets/questionPage/flower.svg" alt="pink flower with green stem and leaves"/>
     </section>
+    </div>
     </body>
 </html>

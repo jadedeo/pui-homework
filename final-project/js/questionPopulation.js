@@ -7,31 +7,36 @@ const questions = {
       "questionText": "Is this label greenwashing? Q1",
       "indepthQuestionText": "On their k-cups, Keurig includes the label of recyclable. Is the inclusion of this term an example of greenwashing?",
       "imageFile": "qOneKeurig.jpg",
-      "correctAnswer":"yes"
+      "correctAnswer":"yes",
+      "altText":"keurig cup label"
   },
   3: {
       "questionText": "Is this label greenwashing? Q2",
       "indepthQuestionText": "Q2 On their k-cups, Keurig includes the label of recyclable. Is the inclusion of this term an example of greenwashing?",
       "imageFile": "qOneKeurig.jpg",
-      "correctAnswer":"yes"
+      "correctAnswer":"yes",
+      "altText":"keurig cup label"
   },
   5: {
       "questionText": "Is this label greenwashing? Q3",
       "indepthQuestionText": "Q3 On their k-cups, Keurig includes the label of recyclable. Is the inclusion of this term an example of greenwashing?",
       "imageFile": "qOneKeurig.jpg",
-      "correctAnswer":"yes"
+      "correctAnswer":"yes",
+      "altText":"keurig cup label"
   },
   7: {
       "questionText": "Is this label greenwashing? Q4",
       "indepthQuestionText": "Q4 On their k-cups, Keurig includes the label of recyclable. Is the inclusion of this term an example of greenwashing?",
       "imageFile": "qOneKeurig.jpg",
-      "correctAnswer":"yes"
+      "correctAnswer":"yes",
+      "altText":"keurig cup label"
   },
   9: {
     "questionText": "Is this label greenwashing? Q5",
       "indepthQuestionText": "Q5 On their k-cups, Keurig includes the label of recyclable. Is the inclusion of this term an example of greenwashing?",
       "imageFile": "qOneKeurig.jpg",
-      "correctAnswer":"yes"
+      "correctAnswer":"yes",
+      "altText":"keurig cup label"
   }
 };
 
@@ -80,6 +85,7 @@ function renderQuestion() {
   //adding relevant content to relevant variables 
   questionNum.innerText = questionTracker;
   questionImg.src = "assets/questionPage/" + questions[pageTracker]["imageFile"];
+  questionImg.alt = "assets/questionPage/" + questions[pageTracker]["altText"];
   indepthQuestionText.innerText = questions[pageTracker]["indepthQuestionText"];
  
 }
@@ -134,6 +140,30 @@ function checkAnswer(){
 
 }
 
+
+//FLOWER ANIMATION//
+let currentScale = 1; // Start at normal size
+let scaleChange = 0.15
+
+// taking accuracy as a parameter to determine whether or not the flower should grow or shrink 
+function animateFlower(accuracy) {
+    // depending on the accuracy of the answer, determine the scale to change the flower 
+    
+    if(accuracy === "correct" ){
+        currentScale = currentScale + scaleChange
+    }
+    else {
+        currentScale = currentScale - scaleChange
+    }
+    // Animate the flower with GSAP
+    gsap.to("#flower", {
+        scale: currentScale,
+        duration: 0.8,
+        
+    });
+}
+
+
 //registering what answer (yes or no) a user selected and checking to see if this answer was correct
 function buttonSelection(){
   document.addEventListener('click', (event) => {
@@ -144,6 +174,7 @@ function buttonSelection(){
         accuracy = checkAnswer();
         console.log(accuracy);
         changeDisplay(accuracy);
+        animateFlower(accuracy);
       }
       else{ //changing content back to the question format and repopulating this div 
         changeDisplay(accuracy);
@@ -165,21 +196,21 @@ function changeDisplay(accuracy) {
   if (pageTracker < (Object.entries(questions).length * 2)){
     if (pageTracker % 2 === 0) {
       questionTracker++
-      responseContainer.style.display = "block";
-      quizContainer.style.display = "none";
+      responseContainer.style.display = "flex";
+      questionContent.style.display = "none";
       nextButton.innerText = "Q" + questionTracker;
       renderExplanation(accuracy);
     }
     else{
       responseContainer.style.display = "none";
-      quizContainer.style.display = "block";
+      questionContent.style.display = "flex";
       renderQuestion();
     }
   }
   else{
     responseContainer.style.display = "none";
-    quizContainer.style.display = "none";
-    resultsPage.style.display = "block";
+    questionContent.style.display = "none";
+    resultsPage.style.display = "flex";
     renderResults(score);
   }
 
@@ -201,11 +232,6 @@ function changeDisplay(accuracy) {
 
 /*
 
-function showResults() {
-  const quizDiv = document.getElementById("quiz");
-  quizDiv.innerHTML = `<h2>Your score: ${score}/${questions.length}</h2>`;
-  document.getElementById("next").style.display = "none";
-}
 
 // Initialize the quiz
 
