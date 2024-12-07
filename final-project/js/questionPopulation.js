@@ -151,6 +151,7 @@ function animateFlower(accuracy) {
     
     if(accuracy === "correct" ){
         currentScale = currentScale + scaleChange
+        console.log(accuracy);
     }
     else {
         currentScale = currentScale - scaleChange
@@ -188,7 +189,7 @@ function buttonSelection(){
 function changeDisplay(accuracy) {
   // Increment tracker 
   pageTracker++;
-  const questionContainer = document.querySelector(".questionContent");
+  const questionContainer = document.getElementById("questionContent");
   const responseContainer = document.getElementById('responseContent');
   const resultsPage = document.getElementById('resultsPage');
 
@@ -198,6 +199,7 @@ function changeDisplay(accuracy) {
       questionTracker++
       responseContainer.style.display = "flex";
       questionContainer.style.display = "none";
+      console.log(questionContainer.style.display);
       nextButton.innerText = "Q" + questionTracker;
       renderExplanation(accuracy);
     }
@@ -209,7 +211,7 @@ function changeDisplay(accuracy) {
   }
   else{
     responseContainer.style.display = "none";
-    questionContent.style.display = "none";
+    questionContainer.style.display = "none";
     resultsPage.style.display = "flex";
     renderResults(score);
   }
