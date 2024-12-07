@@ -188,7 +188,7 @@ function buttonSelection(){
 function changeDisplay(accuracy) {
   // Increment tracker 
   pageTracker++;
-  const quizContainer = document.querySelector(".quiz-container");
+  const questionContainer = document.querySelector(".questionContent");
   const responseContainer = document.getElementById('responseContent');
   const resultsPage = document.getElementById('resultsPage');
 
@@ -197,13 +197,13 @@ function changeDisplay(accuracy) {
     if (pageTracker % 2 === 0) {
       questionTracker++
       responseContainer.style.display = "flex";
-      questionContent.style.display = "none";
+      questionContainer.style.display = "none";
       nextButton.innerText = "Q" + questionTracker;
       renderExplanation(accuracy);
     }
     else{
       responseContainer.style.display = "none";
-      questionContent.style.display = "flex";
+      questionContainer.style.display = "flex";
       renderQuestion();
     }
   }
