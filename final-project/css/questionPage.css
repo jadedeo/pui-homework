@@ -28,7 +28,7 @@ body {
     margin-right: 10%;
 }
 
-/****** CS For Question Content Only *****/
+/****** CSS For Question Content Only *****/
 .questionTextContent{
     display:flex;
     flex-direction: column;
