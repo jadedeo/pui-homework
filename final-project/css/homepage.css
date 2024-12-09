@@ -73,20 +73,20 @@ p{
   .circle:nth-child(4) {
     width: 100px;
     height: 100px;
-    top: 90%;
-    left: 40%;
+    top: 50%;
+    left: 20%;
   }
   .circle:nth-child(5) {
     width: 70px;
     height: 70px;
-    top: 90%;
+    top: 20%;
     left: 50%;
   }
   .circle:nth-child(6) {
     width: 200px;
     height: 200px;
     top: 50%;
-    left: 95%;
+    left: 75%;
   }
   .circle:nth-child(7) {
     width: 150px;
@@ -97,7 +97,7 @@ p{
   .circle:nth-child(8) {
     width: 150px;
     height: 150px;
-    top: 90%;
+    top: 70%;
     right: 5%;
     /* begin button */
   }
