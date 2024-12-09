@@ -13,83 +13,86 @@
     <body>
    
 
-      <div id="quizContentEntire" style="display:flex">
+        <div id="quizContentEntire" style="display:flex">
 
-        <div i="quizContentSansFlower">
-            <div class="contentContainer" id="questionContent" style="display:flex;"> 
-                <!-- class is for general styling and id is for javascript -->
-                <div id="questionNum">
-                    
-                </div>
-    
-                <div>
-                    <img class="questionImage"/> 
-                    
-                    
-                </div>
-                    <div id="questionTextContent">
-                        <h1 id="questionText">
-                            Is this label greenwashing?
-                        </h1>
-                        <p id="indepthQuestionText">
+            <div i="quizContentSansFlower">
+                <!-- start  of  QUIZ CONTENT CONTAINER -->
+                    <div class="contentContainer" id="questionContent" style="display:flex;"> 
+                        <!-- class is for general styling and id is for javascript -->
+                        <div id="questionNum">
+                            
+                        </div>
+            
+                        <div>
+                            <img class="questionImage"/> 
+                        </div>
+                            
+                        <div id="questionTextContent">
+                                <h1 id="questionText">
+                                    Is this label greenwashing?
+                                </h1>
+                                <p id="indepthQuestionText">
+                                
+                                </p>
+                        </div>
+
+                        <div id="questionButtons">
+                            <button id="yesButton" value="yes"> Yes </button>
+                            <button id="noButton" value="no"> No </button>
+                        </div>
+                    </div>
+                <!-- end of  QUIZ CONTENT CONTAINER -->
+
+                <!-- start of  RESPONSE CONTENT CONTAINER -->
+                    <div class="contentContainer" id="responseContent" style="display:none;">
+                        <div id="responseTextContent">
+                            <h1 id="accuracy"> 
+                                "Your answer was..."
+                                <!-- populating with text before being displayed as a way to ensure that the header is not interpreted as empty -->
+                            </h1>
+                            <p id="explainerText">
+
+                            </p>
+                            <a  id="addtResourcesLink">
+                                <p id="addtResources">
+
+                                </p>
+                            </a>
+
                         
+                            <button id="nextQuestion" value="next"> Q </button>
+                        </div>
+                    </div>
+                <!-- end of RESPONSE CONTENT CONTAINER -->
+
+                <!-- start of  RESULTS CONTENT CONTAINER  -->
+                    <div class="contentContainer" id="resultsPage" style="display:none;">
+                        <h1 id="quizResults"> 
+                            "You received _ out of _ answers correctly"
+                            <!-- populating with text before being displayed as a way to ensure that the header is not interpreted as empty -->
+                        </h1>
+                        <p id="moreResources">
+                            I hope this page was able to inform you about the intricacies of greenwashing and begin to teach you how to go about identifying it. 
+                            Here are some resources for learning more about greenwashing!
+                            <ul>
+                            <a href=""><li></li></a>
+                            <a href=""><li></li></a>
+                            <a href=""><li></li></a>
+                            </ul>
                         </p>
                     </div>
-                <div id="questionButtons">
-                    <button id="yesButton" value="yes"> Yes </button>
-                    <button id="noButton" value="no"> No </button>
-                </div>
+                    <!-- end of RESULTS CONTENT CONTAINER-->
+          
+                </div> <!-- end of CONTENT CONTAINER SANS FLOWERS -->
+            
+            
+            <div id="flower">
+                <img src="./assets/questionPage/flower.svg" alt="pink flower with a green stem and green leaves">
             </div>
-   
-            <!-- start of response Content Container -->
-        <div class="contentContainer" id="responseContent" style="display:none;">
-                <div id="responseTextContent">
-                    <h1 id="accuracy"> 
-                        "Your answer was..."
-                        <!-- populating with text before being displayed as a way to ensure that the header is not interpreted as empty -->
-                    </h1>
-                    <p id="explainerText">
+    
+        </div> 
+           <!-- end of ENTIRE CONTENT CONTAINER -->
 
-                    </p>
-                    <a  id="addtResourcesLink">
-                        <p id="addtResources">
-
-                        </p>
-                     </a>
-
-                
-                    <button id="nextQuestion" value="next"> Q </button>
-                </div>
-        </div>
-              <!-- endof response Content Container -->
-
-          <!-- start of results content container -->
-         <div class="contentContainer" id="resultsPage" style="display:none;">
-            <h1 id="quizResults"> 
-                "You received _ out of _ answers correctly"
-                <!-- populating with text before being displayed as a way to ensure that the header is not interpreted as empty -->
-            </h1>
-            <p id="moreResources">
-                I hope this page was able to inform you about the intricacies of greenwashing and begin to teach you how to go about identifying it. 
-                Here are some resources for learning more about greenwashing!
-                <ul>
-                <a href=""><li></li></a>
-                <a href=""><li></li></a>
-                <a href=""><li></li></a>
-                </ul>
-            </p>
-        </div>
-        <!-- end of results content container -->
-
-        <div id="flower">
-            <img src="./assets/questionPage/flower.svg">
-        </div>
-
-    </div>
-
-  
-
-   
-    </div>
     </body>
-</html>
+
+    </html>
