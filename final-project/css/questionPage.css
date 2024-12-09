@@ -1,10 +1,16 @@
-/****** CS For Entire Page *****/
+/****** CS FOR ENTIRE PAGE*****/
 body {
     background: #43A977;
-    
 }
 
+@font-face {
+    font-family: 'questionFont';
+    src: url('/final-project/assets/fonts/AnonymousPro-Regular.ttf') format('truetype'); 
+  }
 
+
+
+/* container of all the content except for the flower; creating the card container for the flower */
 .contentContainer{
     width: 800px;
     height: 255px;
@@ -15,26 +21,51 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'questionFont';
     
 }
-
-
-
+/* includes the flowers and the text container */
 #quizContentEntire{
     display:flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10%;
     margin-left: 10%;
     margin-right: 10%;
 }
 
-/****** CSS For Question Content Only *****/
-.questionTextContent{
+
+
+/****** CSS FOR QUESTION CONTENT ONLY *****/
+
+
+
+/* resizing images to ensure they are proportionally correct to their container */
+.questionImage{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: 10px;  /* rouding the corners */
+    padding: 5%;
+}
+
+
+
+
+
+#questionTextContent{
     display:flex;
     flex-direction: column;
+    width: 20%;
 }
 
 .questionButtons{
     display:flex;
     flex-direction: row;
+}
+
+/****** CSS FOR RESPONSE CONTENT ONLY *****/
+#responseTextContent{
+    display:flex;
+    flex-direction:column;
 }

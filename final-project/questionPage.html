@@ -44,19 +44,25 @@
    
             <!-- start of response Content Container -->
         <div class="contentContainer" id="responseContent" style="display:none;">
-            <img class="questionImage" alt=""/> 
-            <h1 id="accuracy"> 
-                "Your answer was..."
-                <!-- populating with text before being displayed as a way to ensure that the header is not interpreted as empty -->
-            </h1>
-            <p id="explainerText">
+                <div id="responseTextContent">
+                    <h1 id="accuracy"> 
+                        "Your answer was..."
+                        <!-- populating with text before being displayed as a way to ensure that the header is not interpreted as empty -->
+                    </h1>
+                    <p id="explainerText">
 
-            </p>
-            <p id="addtResources"></p>
+                    </p>
+                    <a  id="addtResourcesLink">
+                        <p id="addtResources">
 
-            </p>
-            <button id="nextQuestion" value="next"> Q </button>
+                        </p>
+                     </a>
+
+                
+                    <button id="nextQuestion" value="next"> Q </button>
+                </div>
         </div>
+              <!-- endof response Content Container -->
 
           <!-- start of results content container -->
          <div class="contentContainer" id="resultsPage" style="display:none;">
@@ -65,17 +71,21 @@
                 <!-- populating with text before being displayed as a way to ensure that the header is not interpreted as empty -->
             </h1>
             <p id="moreResources">
+                I hope this page was able to inform you about the intricacies of greenwashing and begin to teach you how to go about identifying it. 
                 Here are some resources for learning more about greenwashing!
-
+                <ul>
+                <a href=""><li></li></a>
+                <a href=""><li></li></a>
+                <a href=""><li></li></a>
+                </ul>
             </p>
         </div>
+        <!-- end of results content container -->
     </div>
 
   
 
-    <section id="flower">
-        <img src="assets/questionPage/flower.svg" alt="pink flower with green stem and leaves"/>
-    </section>
+   
     </div>
     </body>
 </html>
